@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>in100 - The in100 Project</title>
+<script type="text/javascript" src="in100_files/jquery.js"></script>
+<script type="text/javascript" src="in100_files/jquery_002.js"></script>
+<script type="text/javascript" src="in100_files/javascript.js"></script>
+<link rel="stylesheet" type="text/css" href="in100_files/style.css">
+<link rel="stylesheet" href="in100_files/jquery.css" type="text/css" media="screen">
+</head><body>
+	<div id="leftSide">
+    	<!--Site Title-->
+    	<div id="title">
+        	<!--Main Title -->
+		<img src="in100_files/in100.jpg" border="0"><br>
+		<center>
+        	<h1><span></span></h1>
+		</center>
+            <!--Caption/Sub Title
+            <span class="titleSubText">in 100 years someone will 
+research you.<BR>Leave them a message.</span>
+-->
+        </div>
+        <div id="arrowWrapper"><div style="display: none;" id="arrow"></div></div>
+    	<div id="buttonsWrapper">
+        
+        	<!--About Button-->
+        	<div id="aboutButtonWrapper">
+            	<div style="background-position: 0px 0px;" class="navButton" id="aboutButton"></div>
+                <div style="left: 50px; opacity: 0;" class="navCaption" id="aboutCaption">
+                	<!--About Button: Label-->
+                	<span class="navCaptionText">about</span><br>
+                    <!--About Button: Sub-Label-->
+                	<span class="navSubCaptionText">about the in100 project</span>
+                </div>
+            </div>
+            
+        	<!--Portfolio Button-->
+        	<div id="portfolioButtonWrapper">
+            	<div style="background-position: 0px -64px;" class="navButton" id="portfolioButton"></div>
+                <div style="left: 50px; opacity: 0;" class="navCaption" id="portfolioCaption">
+                    <!--Portfolio Button: Label-->
+                	<span class="navCaptionText">portfolio</span><br>
+                    <!--Portfolio Button: Sub-Label-->
+                	<span class="navSubCaptionText">my work</span>  
+                </div>
+			</div>
+            
+        	<!--Services Button-->
+        	<div id="servicesButtonWrapper">
+            	<div style="background-position: 0px -128px;" class="navButton" id="servicesButton"></div>
+                <div style="left: 50px; opacity: 0;" class="navCaption" id="servicesCaption">
+                	<!--Services Button: Label-->
+                	<span class="navCaptionText">services</span><br>
+                    <!--Services Button: Sub-Label-->
+                	<span class="navSubCaptionText">what I do</span>                  
+                </div>
+            </div>
+            
+        	<!--Contact Button-->
+        	<div id="contactButtonWrapper">
+            	<div style="background-position: 0px -192px;" class="navButton" id="contactButton"></div>
+                <div style="left: 50px; opacity: 0;" class="navCaption" id="contactCaption">
+                	<!--Contact Button: Label-->
+                	<span class="navCaptionText">contact</span><br>
+                    <!--Contact Button: Sub-Label-->
+                	<span class="navSubCaptionText">get in touch</span>                  
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div id="contentPanelWrapper">
+		<div id="contentPanelEdge"></div>
+        
+        
+        <!--Wrapper That Contains 'About' Content-->
+        <div class="content" id="aboutContent">
+        	<!--Title-->
+        	<div class="contentTitle">about</div>
+            <!--Body Text-->
+            <div id="aboutText">
+            	<h3>About the in100 Project</h3><br>
+            	<p>
+		The in100 Project lets people leave messages to the people
+who will be researching them in 100 years.</p><br>
+                <p>
+		100 years from now, the context will be different.  The
+people will be different.  There won't be anyone who knew us personally to
+fill in the blanks.
+            	</p>
+		<p>
+		The content, and your message, is up to you. Video is the
+suggested medium.  Participation is by invitation.</p>
+		<p>
+            </div>
+		</div>
+        
+        
+        <!--Wrapper That Contains 'Portfolio' Content-->
+        <div class="content" id="portfolioContent">
+        	<!--Title-->
+        	<div class="contentTitle">portfolio</div>
+            <!--Image Slider-->
+            <div id="portfolioSlider">
+            	<div id="sliderToolbar">
+                	<div class="sliderButton" id="prevButton"></div>
+                    <div class="sliderButton" id="nextButton"></div>
+                </div>
+            	<div style="width: 2164px;" id="imageWrapper">
+            		<ul id="imgList">
+						<!--Portfolio Images Go Here (See Documentation)-->
+            			<li><a class="sliderImage" href="http://in100.org/images/portfolio/img1-large.jpg"><img alt="" src="in100_files/img1-small.jpg"></a></li>
+                		<li><a class="sliderImage" href="http://in100.org/images/portfolio/img2-large.jpg"><img alt="" src="in100_files/img2-small.jpg"></a></li>
+                		<li><a class="sliderImage" href="http://in100.org/images/portfolio/img3-large.jpg"><img alt="" src="in100_files/img3-small.jpg"></a></li>
+                		<li><a class="sliderImage" href="http://in100.org/images/portfolio/img4-large.jpg"><img alt="" src="in100_files/img4-small.jpg"></a></li>
+                	</ul>
+                </div>
+            </div>
+		</div>
+        
+        
+        <!--Wrapper That Contains 'Services' Content-->
+        <div class="content" id="servicesContent">
+        	<!--Title-->
+	  		<div class="contentTitle">services</div>
+            <!--Service 1 Column-->
+            <div class="serviceColumn" id="serviceColumn1">
+            	<h3>Selection & Collection</h3><br>
+                <p>The first step is selecting people who are likely to be 
+researched in 100 years.  They compose their message, record their video,
+and upload it to the in100 site.
+                </p>
+            </div>
+            <!--Service 2 Column-->
+            <div class="serviceColumn" id="serviceColumn2">
+            	<h3>Archiving & Delivery</h3><br>
+                <p>
+		The video messages are indexed, and stored in multiple
+locations to facilitate retreival.  The effect when played in 100 years
+should be similar to Obi-wan's message to Luke Skywalker from Star Wars.
+                </p>
+            </div>
+            <!--Service 3 Column-->
+            <div class="serviceColumn" id="serviceColumn3">
+            	<h3>Propagation</h3><br>
+                <p>
+		Participants will each receive 4 invitation codes which 
+may be given to those they believe will have people looking for them in
+100 years.
+                </p>
+       	    </div>
+		</div>
+        
+        
+        <!--Wrapper That Contains 'Contact' Content-->
+		<div class="content" id="contactContent">
+        	<!--Title-->
+  		<div class="contentTitle">contact</div> 
+      		<div id="contactFormWrapper">
+            	<!--Contact Form-->
+       	  		<form id="contact" method="post" action="mail.php">
+           	  		<input id="name" name="name" value="name" type="text">
+              		<input id="email" name="email" value="email" type="text"><br><br>
+              		<textarea id="message" name="message" rows="" cols="">message</textarea>
+              		<input id="submit" src="in100_files/sendButtonDis.png" disabled="disabled" type="image">
+          		</form>
+                <div id="successMessage"></div>
+      		</div>
+  	    </div>
+        
+        
+	</div>
+        
+<div id="fancy_overlay"></div><div id="fancy_loading"><div></div></div><div id="fancy_outer"><div id="fancy_inner"><div id="fancy_close"></div><div id="fancy_bg"><div class="fancy_bg" id="fancy_bg_n"></div><div class="fancy_bg" id="fancy_bg_ne"></div><div class="fancy_bg" id="fancy_bg_e"></div><div class="fancy_bg" id="fancy_bg_se"></div><div class="fancy_bg" id="fancy_bg_s"></div><div class="fancy_bg" id="fancy_bg_sw"></div><div class="fancy_bg" id="fancy_bg_w"></div><div class="fancy_bg" id="fancy_bg_nw"></div></div><a href="javascript:;" id="fancy_left"><span class="fancy_ico" id="fancy_left_ico"></span></a><a href="javascript:;" id="fancy_right"><span class="fancy_ico" id="fancy_right_ico"></span></a><div id="fancy_content"></div></div></div><div id="fancy_title"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="fancy_title" id="fancy_title_left"></td><td class="fancy_title" id="fancy_title_main"><div></div></td><td class="fancy_title" id="fancy_title_right"></td></tr></tbody></table></div></body></html>

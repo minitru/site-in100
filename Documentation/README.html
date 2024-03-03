@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&quot;Identity&quot; Documentation by Bill Labus v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">Identity</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 1/9/2010<br>
+					By: Bill Labus<br>
+					Email: <a href="mailto:bill@labusdesign.com">bill@labusdesign.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/blabus">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#psdFiles">PSD Files</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+			<li><a href="#">Any additional unique features that need an overview</a></li>
+		</ol>
+		
+  <hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This theme is unique in that it relies primarily on JavaScript to display the content of the site- the entire site is actually a single HTML page (index.html). When a user clicks a button for one of the sections, any currently visible content is hidden and that content is then displayed.</p>
+		<p>The structure of the theme contains several sections, the first being a title (and subtitle/caption underneath) at the left side of the page. To edit it, find the section of code below and edit the bold text:</p>
+		<pre>&lt;!--Site Title--&gt;<br>&lt;div id=&quot;title&quot;&gt;
+	&lt;!--Main Title--&gt;
+	&lt;h1&gt;&lt;span&gt;&lt;/span&gt;<strong>Identity</strong>&lt;/h1&gt;
+	&lt;!--Caption/Sub Title--&gt;
+	&lt;span class=&quot;titleSubText&quot;&gt;<strong>the portfolio of john smith</strong>&lt;/span&gt;
+&lt;/div&gt;</pre>
+		<p>To the right of that, 4 nav buttons allow the user to view the corresponding content for that button by clicking it. To edit the label and sublabel of each nav button (shown when hovered over), find the section of code below (according to the button you want to edit- shown below is the 'About' button) and edit the bold text:		</p>
+		<pre>&lt;!--About Button--&gt;
+&lt;div id=&quot;aboutButtonWrapper&quot;&gt;
+	&lt;div class=&quot;navButton&quot; id=&quot;aboutButton&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;navCaption&quot; id=&quot;aboutCaption&quot;&gt;
+		&lt;!--About Button: Label--&gt;
+		&lt;span class=&quot;navCaptionText&quot;&gt;<strong>about</strong>&lt;/span&gt;&lt;br /&gt;
+		&lt;!--About Button: Sub-Label--&gt;
+		&lt;span class=&quot;navSubCaptionText&quot;&gt;<strong>who I am</strong>&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+		<p>When the button is clicked, it's content slides in from the right in a horizontal panel (ID 'contentPanelWrapper'). Within this DIV, there is a wrapper DIV for each section of content (About, Portfolio, Services &amp; Contact).</p>
+		<hr>
+		<h4><strong>Editing the 'About' Content</strong></h4>
+		<p>To edit the 'About' title, find the section of code below and edit the bold text:</p>
+	  <pre>
+&lt;div class=&quot;contentTitle&quot;&gt;<strong>about</strong>&lt;/div&gt;</pre>
+	  <p>And to edit the text shown in the About panel, edit the bold text in the code below:</p>
+	  <pre>&lt;div id=&quot;aboutText&quot;&gt;
+	<strong>&lt;h3&gt;Who I Am&lt;/h3&gt;&lt;br /&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing... (NOT ALL SHOWN)</strong>
+&lt;/div&gt;
+</pre>
+	  <hr>
+      <h4><strong>Editing the 'Portfolio' Content</strong></h4>
+      <p>To edit the 'Portfolio' title, find the section of code below and edit the bold text:</p>
+      <pre>
+&lt;div class=&quot;contentTitle&quot;&gt;<strong>portfolio</strong>&lt;/div&gt;</pre>
+      <p>Your portoflio images are browsed through a slider. When the user wants to view an image, they click on it and it expands to fill the screen (via a FancyBox lightbox). Therefore, you need two image files for every item in your portfolio- a smaller &quot;thumbnail&quot; image to be shown in the slider, and the larger full-size version to be displayed when the thumbnail is clicked on. The smaller image must be <strong>exactly 541 x 139px</strong>, while the full size image can be any dimensions. To add an item to the portfolio slider, create an image link tag as shown below:</p>
+      <pre>&lt;li&gt;&lt;a class=&quot;sliderImage&quot; href=&quot;<strong>images/portfolio/img1-large.jpg</strong>&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;<strong>images/portfolio/img1-small.jpg</strong>&quot; /&gt;&lt;/a&gt;&lt;/li&gt;</pre>
+<p>The first image URL (in bold) must point to the larger fullsize version of your image, while the second image URL (also in bold) must point to the smaller thumbnail version. Once your code is correct, add it to the 'imageList' UL (unordered list) as shown below:</p>
+<pre>&lt;ul id=&quot;imgList&quot;&gt;
+	&lt;!--Portfolio Images Go Here (See Documentation)--&gt;
+	<strong>&lt;li&gt;&lt;a class=&quot;sliderImage&quot; href=&quot;images/portfolio/img1-large.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;images/portfolio/img1-small.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;</strong>
+	&lt;li&gt;&lt;a class=&quot;sliderImage&quot; href=&quot;images/portfolio/img2-large.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;images/portfolio/img2-small.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class=&quot;sliderImage&quot; href=&quot;images/portfolio/img3-large.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;images/portfolio/img3-small.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class=&quot;sliderImage&quot; href=&quot;images/portfolio/img4-large.jpg&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;images/portfolio/img4-small.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+	...
+&lt;/ul&gt;
+</pre>
+<hr>
+<h4><strong>Editing the 'Services' Content</strong></h4>
+<p>To edit the 'Services' title, find the section of code below and edit the bold text:</p>
+<pre>
+&lt;div class=&quot;contentTitle&quot;&gt;<strong>services</strong>&lt;/div&gt;</pre>
+<p>The services panel displays 3 columns, allowing you to list the different services or products you offer (or any type of information). To edit a column, simply find it's corresponding code as shown below and edit the bold text:</p>
+<pre>&lt;!--Service 1 Column--&gt;<br>&lt;div class=&quot;serviceColumn&quot; id=&quot;serviceColumn1&quot;&gt;<br>	<strong>&lt;h3&gt;Identity Design&lt;/h3&gt;&lt;br /&gt;<br>	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing... (NOT ALL SHOWN)</strong>
+&lt;/div&gt;
+</pre>
+<hr>
+<h4><strong>Editing the 'Contact' Content</strong></h4>
+<p>To edit the 'Contact' title, find the section of code below and edit the bold text:</p>
+<pre>
+&lt;div class=&quot;contentTitle&quot;&gt;<strong>contact</strong>&lt;/div&gt;</pre>
+<p>The contact panel provides a contact form that allows the user to send you their name, email address and a message. Validation is done client-side through Javascript to ensure that the user has not left any fields blank, as well as provided a valid email address. To configure the contact form, open 'mail.php' (in the root directory) and edit the lines below:</p>
+<p>1. To edit the email address shown in the 'From' field in your email client, edit the address below (this can be any email address, even if it's not yours- it's simply something to be displayed in the 'From' field):</p>
+<pre>
+$EmailFrom = &quot;<strong>message@yoursite.com</strong>&quot;;
+</pre>
+<p>2. To edit the email address that the messages will be sent to (usually your own email address), edit the address below:</p>
+<pre>
+$EmailTo = &quot;<strong>your@email.com</strong>&quot;;
+</pre>
+<p>3. To edit the subject that all messages from your site will have, edit the text below:</p>
+<pre>
+$Subject = &quot;<strong>Message From Your Site</strong>&quot;;
+</pre>
+<hr>
+
+	  <h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+<p>The template uses a single CSS stylesheet (css/style.css) to control the styling of all elements of the site. While most of it should not need to be edited, the following sections will let you edit fonts and colors for the titles and text for different sections.</p>
+<h4><strong>Main Title, Caption For Site</strong></h4>
+<pre>h1 {
+	position:relative;
+	font-family:Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+	font-size:19pt;
+	font-weight:normal;
+	text-shadow: rgba(0,0,0,0.75) 0px 1px 2px;
+}
+
+.titleSubText {<br>	font-family:Helvetica, Arial, sans-serif;<br>	color:#a2a0a0;<br>	font-size:10pt;<br>	text-shadow: rgba(0,0,0,0.5) 0px 1px 2px;<br>}
+</pre>
+<h4><strong>Nav Button Labels, Captions</strong></h4>
+<pre>.navCaptionText {<br>	font-family:Helvetica, Arial, sans-serif;<br>	color:#c2c2c2;
+	font-size:11pt;
+	text-shadow: rgba(0,0,0,0.5) 0px 1px 2px;
+}
+
+.navSubCaptionText {<br>	font-family:Helvetica, Arial, sans-serif;<br>	color:#898989;<br>	font-size:8pt;<br>	text-shadow: rgba(0,0,0,0.5) 0px 1px 2px;<br>}
+</pre>
+<h4><strong>Content Panel Titles</strong></h4>
+<pre>.contentTitle {<br>	position:absolute;<br>	left:0px;<br>	top:0px;<br>	width:565px;<br>	height:30px;<br>	font-family:Helvetica, Arial, sans-serif;<br>	color:#434242;<br>	font-size:16pt;<br>	text-shadow: rgba(255,255,255,0.75) 0px 1px 0px;<br>}
+</pre>
+<h4><strong>'About' Text</strong></h4>
+<pre>#aboutText {<br>	height:144px;<br>	font-family:Helvetica, Arial, sans-serif;<br>	color:#434242;<br>	font-size:10pt;<br>	text-shadow: rgba(255,255,255,0.75) 0px 1px 0px;	<br>	overflow:auto;<br>}
+</pre>
+<h4><strong>'Services' Columns Text</strong></h4>
+<pre>.serviceColumn {<br>	position:absolute;<br>	top:55px;<br>	width:165px;<br>	height:165px;<br>	font-family:Helvetica, Arial, sans-serif;<br>	color:#434242;<br>	font-size:8pt;<br>	text-shadow: rgba(255,255,255,0.75) 0px 1px 0px;<br>	line-height:12pt;<br>}
+</pre>
+<h4><strong>'Contact' Textboxes</strong></h4>
+<pre>input, textarea {<br>	outline:none;<br>	border:none;<br>	background-color:rgba(0,0,0,0);<br>	font-family:Helvetica, Arial, sans-serif;<br>	font-size:10pt;<br>	resize:none;<br>	color:#888888;<br>}</pre>
+<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme imports three Javascript files.</p>
+		
+		<ol>
+			<li>javascript/jquery.js</li>
+			<li>javascript/javascript.js</li>
+			<li>fancybox/jquery.fancybox.js</li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>All of the functionality of the site is handles by the scripts in the 'javascript.js' file. The only thing that may need to be edited is the parameters for the FancyBox lightbox plugin (a full list of available parameters can be found here: http://fancybox.net/howto):
+              <pre>	$(&quot;a.sliderImage&quot;).fancybox({<br>		'zoomSpeedIn':200, <br>		'zoomSpeedOut':200, <br>		'overlayShow':true,<br>		'padding':4<br>	});			</pre>
+			</li>
+			<li>The third file, 'jquery.fancybox.js', is the jQuery FancyBox plugin that handles the enlarging of portfolio images when clicked. It should not need to be edited.		  </li>
+		</ol>
+		
+<hr>
+		
+		<h3 id="psdFiles"><strong>D) PSD Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've included the original PSD file for the design, as well as individual PSD files for each of the sliced graphics elements (all located in the 'PSD' folder).</p>
+		<hr>
+		
+		<h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.        
+		<ul>
+			<li>Sample portfolio images taken from the Envato Asset Library: <a href="http://themeforest.net/page/asset_library">http://themeforest.net/page/asset_library</a></li>
+			<li>FancyBox lightbox: <a href="http://fancybox.net/">http://fancybox.net/</a></li>
+		</ul>
+		
+<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Bill Labus</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
